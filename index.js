@@ -29,6 +29,10 @@ console.log('1. this message should show first');
 //////////////////
 /// SERVER
 
+//it will read the file only once when program will starts
+const data = fs.readFileSync('./dev-data/data.json', 'utf-8');
+const dataObj = JSON.parse(data);
+
 const server = http.createServer((req, res) => {
     console.log('request url: ', req.url);
     const pathName = req.url;
@@ -37,6 +41,8 @@ const server = http.createServer((req, res) => {
         res.end('This is overview');
     } else if (pathName === '/product') {
         res.end('This is product');
+    } else if (pathName === '/api') {
+        res.end(data);
     } else  {
         res.writeHead(404, {
            'Content-Type': 'text/html',
