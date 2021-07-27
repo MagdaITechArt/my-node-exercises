@@ -1,0 +1,25 @@
+{
+  "name": "exercises",
+  "version": "1.0.0",
+  "description": "node js first steps",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagdaITechArt/my-node-exercises.git"
+  },
+  "author": "MO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MagdaITechArt/my-node-exercises/issues"
+  },
+  "homepage": "https://github.com/MagdaITechArt/my-node-exercises#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
